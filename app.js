@@ -4,35 +4,35 @@ window.onload =function(){
 } 
 
 var questions = [{
-    ques:"what is your name1",
-    ans: "owais1",
+    ques:"What is the capital of Chile?",
+    ans: "Santiago",
     option:[
-        "owais1",
-        "osama1",
-        "sarim1",
-        "azlan1"
+        "Santiag",
+        "Santiago",
+        "Satiago",
+        "Antiago"
     ]
 
 },
 {
-    ques:"what is your name2",
-    ans: "osama",
+    ques:"What is the highest mountain in Britain?",
+    ans: " Ben Nevis",
     option:[
-        "owais",
-        "osama",
-        "sarim",
-        "azlan"
+        " Ben Nevis",
+        " Nevis",
+        " Be Nevis",
+        " Bn Nevis"
     ]
 
 },
 {
-    ques:"what is your name3",
-    ans: "sarim",
+    ques:"What is the smallest country in the world?",
+    ans: "Vatican City",
     option:[
-        "owais",
-        "osama",
-        "sarim",
-        "azlan"
+        "Vatican",
+        "Tican City",
+        "Vatican",
+        "Vatican City"
     ]
 }
 
@@ -76,10 +76,7 @@ for (let i = 0 ; i < option1.length ; i++){
         }
         
         option1[i].classList.add("active")
-        // if(option1[i].innerHTML == questions[0].ans){
-        //     score += 10;
-        //     console.log(score)
-        // }
+        
     }
 }
 
@@ -88,7 +85,12 @@ function velidate(a){
     var active = document.getElementsByClassName("active")
     if(active[0].innerHTML == questions[a].ans){
         score += 10;
+        count++
         
     }
     console.log(score)
+    if (questions[a] == questions[2]){
+        alert("your score is "+score)
+        
+    }
 }
